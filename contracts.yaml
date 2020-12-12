@@ -1,0 +1,89 @@
+---
+"74637":
+  number: "74637"
+  type: "comprehensive"
+  client:
+    name: "Irina"
+    surname: "Aleksandrova"
+    passport:
+      personalIDNumber: "4e09121972pb001"
+      series: "BM"
+      number: "2094565"
+  insuranceObject:
+    price: 72000
+    square: 30.0
+    address: "ul.Surganova, d.25, kv15"
+    floor: 4
+  contractTerm: 24
+  signingDate: "06.09.2019"
+  insuranceCasesList:
+  - "ACCIDENT"
+  - "NATURAL_DISASTER"
+  - "FIRE"
+  - "HIJACKING"
+  - "ILLEGAL_ACTION"
+  - "THIEF"
+"1243":
+  number: "1243"
+  type: "collision"
+  client:
+    name: "Ivan"
+    surname: "Ivanov"
+    passport:
+      personalIDNumber: "308021992e001pb"
+      series: "BM"
+      number: "2370767"
+  insuranceObject:
+    price: 15000
+    type: "car"
+    number: "1254ke"
+    brand: "audi"
+    model: "A8"
+  contractTerm: 12
+  signingDate: "11.12.2020"
+  insuranceCasesList:
+  - "ACCIDENT"
+"2343":
+  number: "2343"
+  type: "collision"
+  client:
+    name: "Ivan"
+    surname: "Ivanov"
+    passport:
+      personalIDNumber: "4e12031992pb001"
+      series: "BM"
+      number: "2330719"
+  insuranceObject:
+    price: 400
+    bodyNumber: "4356r5"
+    brand: "giant"
+    model: "rewel 4"
+  contractTerm: 12
+  signingDate: "11.12.2020"
+  insuranceCasesList:
+  - "ACCIDENT"
+"3454":
+  number: "3454"
+  type: "comprehensive"
+  client:
+    name: "Aleksandr"
+    surname: "Petrov"
+    passport:
+      personalIDNumber: "3e12091989pb002"
+      series: "KR"
+      number: "1980456"
+  insuranceObject:
+    price: 20000
+    type: "car"
+    number: "1232ke"
+    brand: "audi"
+    model: "a8"
+  contractTerm: 6
+  signingDate: "20.08.2020"
+  insuranceCasesList:
+  - "ACCIDENT"
+  - "NATURAL_DISASTER"
+  - "FIRE"
+  - "HIJACKING"
+  - "ILLEGAL_ACTION"
+  - "THIEF"
