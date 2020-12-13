@@ -33,7 +33,7 @@ public class ContractDB implements  Serializable{
             contracts = (Map<String,IContract>)inputStream.readObject();
             inputStream.close();
         } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
+
         }
 
     }

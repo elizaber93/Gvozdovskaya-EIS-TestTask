@@ -37,7 +37,7 @@ public class ClientDB {
             clients = (Map<String, Client>) inputStream.readObject();
             inputStream.close();
         } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
+
         }
     }
 
