@@ -61,4 +61,8 @@ public class Bycicle  extends InsuranceObject implements Insurable, Serializable
     public void setModel(String model) {
         this.model = model;
     }
+
+    public String getType() {
+        return type;
+    }
 }

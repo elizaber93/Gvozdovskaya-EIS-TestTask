@@ -19,6 +19,15 @@ public class ContractDB implements  Serializable{
 
     public static void getContractDB() {
         File file = new File("contracts.bin");
+        if(!file.exists()) {
+            try
+            {
+                file.createNewFile();
+            }
+            catch(IOException ex){
+                ex.printStackTrace();
+            }
+        }
         try {
             ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(file));
             contracts = (Map<String,IContract>)inputStream.readObject();
@@ -45,14 +54,31 @@ public class ContractDB implements  Serializable{
     }
 
     public static void saveContractsAsJson() throws IOException {
+        File jsonFile = new File("contracts.json");
+        if (!jsonFile.exists()) {
+            try {
+                jsonFile.createNewFile();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
         ObjectMapper objectMapper = new ObjectMapper();
 
         objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
-        objectMapper.writeValue(new File("contracts.json"), contracts);
+        objectMapper.writeValue(jsonFile, contracts);
 
     }
     public static void saveContractsDB() throws IOException {
         File file = new File("contracts.bin");
+        if(!file.exists()) {
+            try
+            {
+                file.createNewFile();
+            }
+            catch(IOException ex){
+                ex.printStackTrace();
+            }
+        }
         ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(file));
         outputStream.writeObject(contracts);
         outputStream.flush();
@@ -61,12 +87,24 @@ public class ContractDB implements  Serializable{
     }
 
     public static void saveContractsAsYAML() throws IOException {
+        File yamlFile = new File("contracts.yaml");
+        if (!yamlFile.exists()) {
+            try {
+                yamlFile.createNewFile();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
         ObjectMapper om = new ObjectMapper(new YAMLFactory());
-        om.writeValue(new File("contracts.yaml"), contracts);
+        om.writeValue(yamlFile, contracts);
     }
 
     public static Map<String, IContract> getContracts() {
-        getContractDB();
+        try {
+            getContractDB();
+        } catch(Exception e) {
+
+        }
         return contracts;
     }
 

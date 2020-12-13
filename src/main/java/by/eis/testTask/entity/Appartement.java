@@ -63,4 +63,8 @@ public class Appartement extends InsuranceObject implements Insurable, Serializa
     public void setFloor(int floor) {
         this.floor = floor;
     }
+
+    public String getType() {
+        return type;
+    }
 }
